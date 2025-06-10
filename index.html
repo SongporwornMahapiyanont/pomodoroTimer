@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Pomodoro Timer</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <h1>Pomodoro Timer</h1>
+  <h2>by Songporworn Mahapiyanont</h2>
+
+  <div class="mode-buttons">
+    <button data-mode = "pomodoro">Pomodoro</button>
+    <button data-mode="short-break">Short Break</button>
+    <button data-mode="long-break">Long Break</button>
+  </div>
+
+  <div id="timer">25:00</div>
+
+  <div class="controls">
+    <button data-control="start">Start</button >
+    <button data-control="pause">Pause</button>
+    <button data-control="reset">Reset</button>
+  </div>
+  <div id="progress-bar-container">
+    <div id="progress-bar"></div>
+  </div>
+  <div id="status" style="margin-top: 10px;">⏱ Ready to focus!</div>
+
+  <div class="music-player">
+    <iframe
+      src="https://open.spotify.com/embed/playlist/37i9dQZF1DXa1BeMIGX5Du?utm_source=generator"
+      width="100%" height="352" frameborder="0"
+      allowfullscreen=""
+      allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"
+      loading="lazy">
+    </iframe>
+  </div>
+
+  <div class="custom-time">
+    <label>
+      Pomodoro (นาที):
+      <input type="number" id="custom-pomodoro" min="1" max="120" value="25">
+    </label>
+    <label>
+      Short Break (นาที):
+      <input type="number" id="custom-short" min="1" max="30" value="5">
+    </label>
+    <label>
+      Long Break (นาที):
+      <input type="number" id="custom-long" min="1" max="60" value="15">
+    </label>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>

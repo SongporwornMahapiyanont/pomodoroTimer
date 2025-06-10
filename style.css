@@ -1,0 +1,195 @@
+* {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      font-family: 'Segoe UI', sans-serif;
+      background-color: #1e1e2f;
+      color: #fff;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      height: 100vh;
+      padding: 20px;
+    }
+
+    h1 {
+      font-size: 36px;
+      margin-bottom: 10px;
+      color: #ff5e57;
+    }
+    h2 {
+      font-size: 36px;
+      margin-top: 10;
+      margin-bottom: 30px;
+      color: #ffffff;
+    }
+    .mode-buttons {
+      display: flex;
+      gap: 15px;
+      margin-bottom: 20px;
+    }
+
+    .mode-buttons button {
+      background: #2d2d44;
+      color: #fff;
+      padding: 10px 20px;
+      border: none;
+      border-radius: 10px;
+      cursor: pointer;
+      font-size: 16px;
+      transition: background 0.2s ease;
+    }
+
+    .mode-buttons button:hover {
+      background-color: #444466;
+    }
+
+    #timer {
+      font-size: 72px;
+      background: #2d2d44;
+      padding: 20px 40px;
+      border-radius: 20px;
+      margin-bottom: 20px;
+      box-shadow: 0 10px 25px rgba(0, 0, 0, 0.3);
+    }
+
+    .controls {
+      display: flex;
+      gap: 15px;
+      margin-bottom: 20px;
+    }
+
+    .controls button {
+      background: #ff5e57;
+      color: #fff;
+      border: none;
+      padding: 12px 24px;
+      border-radius: 10px;
+      font-size: 16px;
+      font-weight: bold;
+      cursor: pointer;
+      transition: background 0.2s ease;
+    }
+
+    .controls button:hover {
+      background: #e14c45;
+    }
+
+    #status {
+      font-size: 20px;
+      color: #aaa;
+    }
+
+    @media screen and (max-width: 500px) {
+      h1 {
+        font-size: 28px;
+      }
+
+      #timer {
+        font-size: 48px;
+        padding: 15px 25px;
+      }
+
+      .controls,
+      .mode-buttons {
+        flex-direction: column;
+        width: 100%;
+      }
+
+      .controls button,
+      .mode-buttons button {
+        width: 100%;
+      }
+    }
+
+    .music-player {
+      width: 100%;
+      max-width: 420px;
+      margin: 32px auto 0 auto;
+      border-radius: 18px;
+      overflow: hidden;
+      box-shadow: 0 4px 24px rgba(30, 30, 47, 0.18), 0 1.5px 6px rgba(255, 94, 87, 0.08);
+      background: #23233b;
+      transition: box-shadow 0.2s;
+    }
+
+    .music-player:hover {
+      box-shadow: 0 8px 32px rgba(255, 94, 87, 0.18), 0 3px 12px rgba(30, 30, 47, 0.12);
+    }
+
+    .music-player iframe {
+      display: block;
+      width: 100%;
+      border: none;
+      border-radius: 0;
+    }
+
+    .music-player-title {
+      text-align: center;
+      color: #ff5e57;
+      font-weight: bold;
+      margin-bottom: 8px;
+      font-size: 1.1em;
+      letter-spacing: 1px;
+    }
+
+    .custom-time {
+  margin: 32px auto 0 auto;
+  padding: 18px 24px;
+  background: #23233b;
+  border-radius: 16px;
+  box-shadow: 0 2px 12px rgba(30,30,47,0.10);
+  display: flex;
+  gap: 24px;
+  justify-content: center;
+  align-items: center;
+  max-width: 600px;
+}
+
+.custom-time label {
+  color: #ff5e57;
+  font-weight: 500;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  font-size: 1em;
+  gap: 6px;
+}
+
+.custom-time input[type="number"] {
+  width: 60px;
+  padding: 6px 8px;
+  border-radius: 8px;
+  border: 1px solid #444;
+  background: #1e1e2f;
+  color: #fff;
+  font-size: 1em;
+  outline: none;
+  transition: border 0.2s;
+}
+
+.custom-time input[type="number"]:focus {
+  border: 1.5px solid #ff5e57;
+  background: #23233b;
+}
+
+#progress-bar-container {
+  width: 100%;
+  max-width: 320px;
+  height: 16px;
+  background: #23233b;
+  border-radius: 8px;
+  margin: 16px auto 0 auto;
+  overflow: hidden;
+  box-shadow: 0 2px 8px rgba(30,30,47,0.10);
+}
+#progress-bar {
+  height: 100%;
+  width: 0%;
+  background: linear-gradient(90deg, #ff5e57 60%, #ffb86c 100%);
+  transition: width 0.3s;
+}
